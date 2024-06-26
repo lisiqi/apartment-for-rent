@@ -1,4 +1,6 @@
-data
-
 # Ignore system files
 .DS_Store
+
+__pycache__
+
+mlruns
