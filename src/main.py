@@ -53,7 +53,7 @@ def train_model():
         print(
             f"Model training complete and saved to 'rental_price_model.pkl'. RMSE: {rmse}"
         )
-        print("Test data saved to 'test_data.json'")
+        print("Test data saved to 'data/test_data.json'")
 
 
 if __name__ == "__main__":
