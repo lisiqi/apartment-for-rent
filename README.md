@@ -15,7 +15,7 @@ A dataset of classified for apartments for rent in USA.
 
 There are data quality issues need to be fixed first. Handled in
 
-`src/utils/dataloader.py`
+[src/utils/dataloader.py](src/utils/dataloader.py)
 
 Data quality issue examples:
 
@@ -31,7 +31,7 @@ Data quality issue examples:
 
 After experiments, considering both accuracy on RMSE and running time, **XGBoost** (n_estimators=1500) is the best performed model chosen for production.
 
-Model and model performance during training phase are logged with MLflow. See in `src/main.py`
+Model and model performance during training phase are logged with MLflow. See in [src/main.py](src/main.py)
 
 ### Deployment
 
@@ -104,7 +104,7 @@ apartment-for-rent/
 
 ## Feature Engineering
 
-The features used are listed in `src/config/configuration.py`
+The features used are listed in [src/config/configuration.py](src/config/configuration.py)
 
 ```
 OTHER_FEATURES = ['amenities', 'time']
@@ -120,9 +120,9 @@ To build a proper application, features from other or external dataset might be 
 - number of current available properties for rent
 - search frequency
 
-Feature engineering is done in `src/model/preprocessor.py`.
+Feature engineering is done in [src/model/preprocessor.py](src/model/preprocessor.py).
 
-Feature importance can be viewed in `notebooks/4_feature_importance.ipynb`.
+Feature importance can be viewed in [notebooks/4_feature_importance.ipynb](notebooks/4_feature_importance.ipynb).
 
 Detailed explanations regarding some features are as below.
 
@@ -168,7 +168,7 @@ The UI will be accessible at `http://127.0.0.1:5000` to view logged metrics and 
 
 ### Flask App
 
-The Flask app serves the rent price recommender model. The command to run the Flask app and test endpoint is in a shell script `run_app_and_test.sh`
+The Flask app serves the rent price recommender model. The command to run the Flask app and test endpoint is in a shell script [run_app_and_test.sh](run_app_and_test.sh)
 
 1. Make sure the script is executable
    ```bash
@@ -178,7 +178,7 @@ The Flask app serves the rent price recommender model. The command to run the Fl
    ```bash
    ./run_app_and_test.sh
    ```
-   This script will start the Flask app, send a test request, and then stop the Flask app. You can change the json data input for POST request in this file by referring to `test_data.json`.
+   This script will start the Flask app, send a test request, and then stop the Flask app. You can change the json data input for POST request in this file by referring to [data/test_data.json](data/test_data.json).
 
 ### Pre-commit
 
